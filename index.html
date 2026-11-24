@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>阿木 · 个人小站</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">阿木</a>
+    <nav class="nav">
+      <a href="#about">关于</a>
+      <a href="#calculator">计算器</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1 class="hero-brand">阿木</h1>
+      <p class="hero-line">写代码，做小工具，把想法变成页面。</p>
+      <p class="hero-support">一个只靠 HTML、CSS 与 JavaScript 搭起来的个人角落。</p>
+      <a class="cta" href="#calculator">试试计算器</a>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="orbit orbit-delay"></div>
+        <div class="hero-core"></div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>关于我</h2>
+      <p>
+        喜欢用最少的技术做出能用的东西。这个站点没有框架、没有打包，
+        打开就能跑——下面的计算器就是纯前端实现的。
+      </p>
+    </section>
+
+    <section id="calculator" class="calculator-section">
+      <h2>计算器</h2>
+      <p class="section-lead">加减乘除，点一点就算好。</p>
+
+      <div class="calculator" role="application" aria-label="简易计算器">
+        <div class="display" aria-live="polite">
+          <div class="expression" id="expression"></div>
+          <div class="result" id="result">0</div>
+        </div>
+
+        <div class="keys">
+          <button type="button" class="key key-fn" data-action="clear">AC</button>
+          <button type="button" class="key key-fn" data-action="sign">±</button>
+          <button type="button" class="key key-fn" data-action="percent">%</button>
+          <button type="button" class="key key-op" data-action="operator" data-value="/">÷</button>
+
+          <button type="button" class="key" data-action="digit" data-value="7">7</button>
+          <button type="button" class="key" data-action="digit" data-value="8">8</button>
+          <button type="button" class="key" data-action="digit" data-value="9">9</button>
+          <button type="button" class="key key-op" data-action="operator" data-value="*">×</button>
+
+          <button type="button" class="key" data-action="digit" data-value="4">4</button>
+          <button type="button" class="key" data-action="digit" data-value="5">5</button>
+          <button type="button" class="key" data-action="digit" data-value="6">6</button>
+          <button type="button" class="key key-op" data-action="operator" data-value="-">−</button>
+
+          <button type="button" class="key" data-action="digit" data-value="1">1</button>
+          <button type="button" class="key" data-action="digit" data-value="2">2</button>
+          <button type="button" class="key" data-action="digit" data-value="3">3</button>
+          <button type="button" class="key key-op" data-action="operator" data-value="+">+</button>
+
+          <button type="button" class="key key-zero" data-action="digit" data-value="0">0</button>
+          <button type="button" class="key" data-action="decimal">.</button>
+          <button type="button" class="key key-eq" data-action="equals">=</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 阿木 · 纯前端小站</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
